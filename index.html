@@ -9,10 +9,7 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,17 +22,18 @@
 </head>
 
 <body>
-    <div class="container">
+    <nav id="navbar">
         <ul>
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#about_us">About</a></li>
-            <li><a href="#Categories">Categories</a></li>
-            <li><a href="#Posts">Recent Posts</a></li>
-            <li><a href="#order">Order</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#header">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#features">FEATURES</a></li>
+            <li><a href="#courses">COURSES</a></li>
+            <li><a href="#offer">OFFER</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+
         </ul>
-    </div>
-    <br><br><br>
+    </nav>
+    <img src="img/menu.png" id="menuBtn">
 
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -77,15 +75,24 @@
         </button>
     </div>
 
-    <br>
+    <div class="md-title">
+        <h5 class="title">Food Blog BD</h5>
+        <h5 class="animate_title">
+
+            <span>B</span><span>E</span><span>S</span><span>T</span> <br>
+            <span>Q</span><span>U</span><span>A</span><span>L</span><span>I</span><span>T</span><span>Y</span>
+
+        </h5>
+    </div>
+
     <section id="about_us">
         <div class="container my-5">
             <div class="row">
                 <div class="col-md-3">
-                    <img src="https://source.unsplash.com/1400x500/?pizza" alt="" class="img_ab_1">
+                    <img src="img/food-service-header-2.jpg" alt="" class="img_ab_1">
                 </div>
                 <div class="col-md-3 my-5">
-                    <img src="https://source.unsplash.com/1400x500/?food" alt="" class="img_ab_2">
+                    <img src="img/Food-Trends.png" alt="" class="img_ab_2">
                 </div>
                 <div class="col-md-6">
                     <h1 class="about_h1">About Us</h1>
@@ -108,7 +115,7 @@
     <section class="catagories">
         <div>
             <h1 class="text-center">Browse by Categories</h1>
-            <div class="container text-left">
+            <div class="container text-left" id="formobile">
                 <div class="row">
                     <div class="col-sm-1">
 
@@ -329,8 +336,8 @@
                     <div class="card" style="width: 14rem;">
                         <img src="img/employee-hands-customers-their-meals.webp" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="text-center" style="font-family: cursive; font-weight:500;">1050</h5>
-                          <h5 class="text-center">Customers</h5>
+                            <h5 class="text-center" style="font-family: cursive; font-weight:500;">1050</h5>
+                            <h5 class="text-center">Customers</h5>
                         </div>
                     </div>
                 </div>
@@ -338,8 +345,8 @@
                     <div class="card" style="width: 14rem;">
                         <img src="img/FullServiceRestaurant_Lead.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="text-center" style="font-family: cursive; font-weight:500;">165+</h5>
-                          <h5 class="text-center">Unique Recipies</h5>
+                            <h5 class="text-center" style="font-family: cursive; font-weight:500;">165+</h5>
+                            <h5 class="text-center">Unique Recipies</h5>
                         </div>
                     </div>
                 </div>
@@ -347,8 +354,8 @@
                     <div class="card" style="width: 14rem;">
                         <img src="img/Food-Trends.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="text-center" style="font-family: cursive; font-weight:500;">9.4</h5>
-                          <h5 class="text-center">Top Rated</h5>
+                            <h5 class="text-center" style="font-family: cursive; font-weight:500;">9.4</h5>
+                            <h5 class="text-center">Top Rated</h5>
                         </div>
                     </div>
                 </div>
@@ -356,8 +363,8 @@
                     <div class="card" style="width: 14rem;">
                         <img src="img/deliver-excellent-customer-service-660x438.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="text-center" style="font-family: cursive; font-weight:500;">10265</h5>
-                          <h5 class="text-center">Minutes</h5>
+                            <h5 class="text-center" style="font-family: cursive; font-weight:500;">10265</h5>
+                            <h5 class="text-center">Minutes</h5>
                         </div>
                     </div>
                 </div>
@@ -532,7 +539,22 @@
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
 
+    <!-- Javascript for Toggle Menu -->
+    <script type="text/javascript">
+        var menuBtn = document.getElementById("menuBtn");
+        var navbar = document.getElementById("navbar");
 
+        navbar.style.right = "-250px";
+        menuBtn.onclick = function () {
+            if (navbar.style.right == "-250px") {
+                navbar.style.right = "0";
+            }
+            else {
+                navbar.style.right = "-250px";
+            }
+        }
+
+    </script>
 
 </body>
 
